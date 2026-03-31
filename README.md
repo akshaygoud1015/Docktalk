@@ -44,7 +44,8 @@ docTalk/
    GOOGLE_API_KEY=your_api_key_here
    ```
 
-## Usage
+## Usage for app
+
 
 1. **Run the application**
    ```
