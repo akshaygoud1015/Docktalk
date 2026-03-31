@@ -1,9 +1,13 @@
-from openai import OpenAI
-client = OpenAI()
+from google import genai
+from google.genai import types
+import os
+
+client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_embedding(text):
-    response = client.embeddings.create(
-        model="text-embedding-3-small",
-        input=text
+    result = client.models.embed_content(
+        model="models/gemini-embedding-001",
+        contents=text,
+        config=types.EmbedContentConfig(task_type="RETRIEVAL_DOCUMENT")
     )
-    return response.data[0].embedding
+    return result.embeddings[0].values

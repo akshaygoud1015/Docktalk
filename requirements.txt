@@ -1,0 +1,7 @@
+streamlit==1.32.0
+pypdf==4.0.1
+chromadb==0.4.14
+google-genai>=1.0.0
+google-generativeai
+python-dotenv==1.0.0
+requests
